@@ -1,9 +1,11 @@
+from stats import word_count, get_char_count, list_sort_dict
+import sys
+
 def get_book_text(filepath):
     with open(filepath) as f:
         file_contents = f.read()
         return file_contents
 
-      
 
 def main():
     if len(sys.argv) != 2:
@@ -22,13 +24,8 @@ def main():
         if d["char"].isalpha():
             print(str(d["char"])+": "+str(d["num"])+"\n")
     print("============= END ===============")
-    
-
-    
 
 
-from stats import word_count
-from stats import get_char_count
-from stats import list_sort_dict
-import sys
-main()
+
+if __name__ == "__main__":
+    main()
